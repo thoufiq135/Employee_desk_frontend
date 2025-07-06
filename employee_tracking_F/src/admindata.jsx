@@ -7,7 +7,7 @@ function Admindata() {
 
   useEffect(() => {
     const fetchEmployees = async () => {
-      const res = await fetch("http://localhost:5000/admin/employees");
+      const res = await fetch("https://employee-desk-backend.onrender.com/admin/employees");
       const data = await res.json();
       setEmployees(data);
     };

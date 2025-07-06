@@ -33,7 +33,7 @@ function  Form(){
           const isauth=async()=>{
            try{
             
-             const response=await fetch("http://localhost:5000/verify_token",{
+             const response=await fetch("https://employee-desk-backend.onrender.com/verify_token",{
                credentials:"include"
              })
              if(response.status!==200){
@@ -51,7 +51,7 @@ function  Form(){
          const isfilled=async()=>{
            try{
             
-             const response=await fetch("http://localhost:5000/fill_form",{
+             const response=await fetch("https://employee-desk-backend.onrender.com/fill_form",{
               method:"POST",
               body:JSON.stringify({naam,email,intime,outtime,perintime,perouttime,per,overalltime,task}),
               headers:{
@@ -117,7 +117,7 @@ setoveralltime(`${diffHrs} Hours ${diffMin} Minutes`);
      if(naam&&email&&intime&&outtime&&overalltime&&task){
       setload(true)
       try{
-const res=await fetch("http://localhost:5000/fill_form",{
+const res=await fetch("https://employee-desk-backend.onrender.com/fill_form",{
   method:"POST",
   body:JSON.stringify({naam,email,intime,outtime,perintime,perouttime,per,overalltime,task}),
   headers:{

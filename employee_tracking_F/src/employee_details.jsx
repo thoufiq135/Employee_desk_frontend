@@ -13,7 +13,7 @@ function EmployeeDetails() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`http://localhost:5000/admin/employeeData?email=${email}`);
+      const res = await fetch(`https://employee-desk-backend.onrender.com/admin/employeeData?email=${email}`);
       const json = await res.json();
       if (json.length > 0) {
         setEmpName(json[0].employeeName);

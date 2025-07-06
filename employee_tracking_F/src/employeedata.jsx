@@ -16,7 +16,7 @@ function Empdata() {
   useEffect(() => {
     const isauth = async () => {
       try {
-        const response = await fetch("http://localhost:5000/verify_token", {
+        const response = await fetch("https://employee-desk-backend.onrender.com/verify_token", {
           credentials: "include",
         });
 
@@ -30,7 +30,7 @@ function Empdata() {
         setMail(email);
 
         const empresponse = await fetch(
-          `http://localhost:5000/empdata?mail=${email}`,
+          `https://employee-desk-backend.onrender.com/empdata?mail=${email}`,
           {
             method: "GET",
             credentials: "include",
