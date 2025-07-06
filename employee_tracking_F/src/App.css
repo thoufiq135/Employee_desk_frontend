@@ -1,0 +1,309 @@
+/* Header Container */
+
+#par {
+  background-color: #fffaf3;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20vw;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Date and Time Boxes */
+#time, #date {
+  background-color: #f3f3f3;
+  height: auto;
+  width: 10.5vw;
+  padding: 0.8vh 1.5vw;
+  border-radius: 10px;
+  font-size: 1.8vh;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  color: #333;
+  position: fixed;
+  left:1vw
+}
+
+/* Heading Text */
+#intro {
+  color: #ffffff;
+  font-size: 3.8vh;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: green;
+  border-radius: 0.5vh;
+  margin-left: 40vw;
+}
+
+/* Section Container */
+#par2 {
+
+  background-color: #ffffff;
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+  flex-wrap: wrap;
+  padding: 2vh 4vw;
+}
+
+/* Card Styles */
+.card {
+  position: relative;
+  width: 200px;
+  height: 240px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card span {
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+/* Content inside card */
+.card .content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #333;
+  text-align: center;
+}
+
+/* Icons */
+#plus, #remove {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Font Awesome icon colors */
+#plus {
+  color: #007bff;
+}
+
+#remove {
+  color: #dc3545;
+}
+
+/* Link Styling */
+#link {
+  text-decoration: none;
+  color: inherit;
+}
+/* Card Styles */
+.card {
+  position: relative;
+  width: 200px;
+  height: 240px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+  transform: translateY(-8px);
+}
+
+/* Animated border using ::before */
+.card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff0058, #ffbc00, #00d4ff, #ff0058);
+  z-index: 1;
+  border-radius: 14px;
+  animation: rotateBorder 4s linear infinite;
+  background-size: 300% 300%;
+}
+
+/* Glow mask */
+.card span {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+/* Card Content */
+.card .content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Font Awesome Icons */
+#plus,
+#remove {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+#plus {
+  color: #007bff;
+}
+
+#remove {
+  color: #dc3545;
+}
+
+#link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Rotate Animation */
+@keyframes rotateBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Main Dashboard Area */
+#employee-dashboard {
+  background-color: #f5f7fa;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+  flex-wrap: wrap;
+  padding: 2vh 4vw;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Individual Card */
+.employee-card {
+  position: relative;
+  width: 200px;
+  height: 240px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.employee-card:hover {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+  transform: translateY(-8px);
+}
+
+/* Animated Border */
+.employee-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff0058, #ffbc00, #00d4ff, #ff0058);
+  border-radius: 14px;
+  z-index: 1;
+  animation: rotateEmployeeBorder 6s linear infinite;
+  background-size: 300% 300%;
+}
+
+/* Card Inner Background */
+.employee-card span {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+/* Card Content */
+.employee-card-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Disabled State */
+.employee-card.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Animation Keyframes */
+@keyframes rotateEmployeeBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
