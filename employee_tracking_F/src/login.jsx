@@ -39,6 +39,7 @@ function Login(){
        setwarn2(data.message)
        setnaam(data.name)
        localStorage.setItem("email",data.mail)
+       localStorage.setItem("token",data.token)
        if(res.status==200){
         if(data.message=="Admin"){
             navigate("/admindashboard")

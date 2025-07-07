@@ -16,7 +16,8 @@ function Employee(){
                credentials:"include"
              })
              if(response.status!==200){
-   navigate("/login")
+  //  navigate("/login")
+  const token=localStorage.getItem("token")
              }else{
                setdisnaam(naam)
                setTimeout(()=>{
