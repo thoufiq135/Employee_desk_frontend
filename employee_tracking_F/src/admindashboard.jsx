@@ -18,7 +18,7 @@ const [disnaam,setdisnaam]=useState(null)
        const isauth=async()=>{
         try{
           const response=await fetch("https://employeedeskbackend-env.up.railway.app/verify_token",{
-            credentials:"include"
+            credentials:"include",
           })
           if(response.status!==200){
 navigate("/login")
