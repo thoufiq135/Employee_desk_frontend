@@ -8,7 +8,7 @@ function Admindata() {
     useEffect(()=>{
        const isauth=async()=>{
         try{
-          const response=await fetch("https://employeedeskbackend-env.up.railway.app/verify_token",{
+          const response=await fetch("https://employee-desk-backend.onrender.com/verify_token",{
             credentials:"include"
           })
           if(response.status!==200){
@@ -22,7 +22,7 @@ navigate("/login")
     },[])
   useEffect(() => {
     const fetchEmployees = async () => {
-      const res = await fetch("https://employeedeskbackend-env.up.railway.app/admin/employees");
+      const res = await fetch("https://employee-desk-backend.onrender.com/admin/employees");
       const data = await res.json();
       setEmployees(data);
     };
