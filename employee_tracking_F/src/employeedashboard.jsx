@@ -18,6 +18,7 @@ function Employee(){
              if(response.status!==200){
   //  navigate("/login")
   const token=localStorage.getItem("token")
+  console.log(token)
              }else{
                setdisnaam(naam)
                setTimeout(()=>{
