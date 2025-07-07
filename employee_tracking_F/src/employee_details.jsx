@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import * as XLSX from "xlsx";
 import "./empdata.css";
-
+import { useNavigate } from "react-router-dom";
 function EmployeeDetails() {
   const { email } = useParams();
   const [data, setData] = useState([]);
@@ -11,9 +11,25 @@ function EmployeeDetails() {
   const [modalTitle, setModalTitle] = useState("");
   const [modalContent, setModalContent] = useState("");
 
+  const navigate=useNavigate()
+    useEffect(()=>{
+       const isauth=async()=>{
+        try{
+          const response=await fetch("https://employeedeskbackend-env.up.railway.app/verify_token",{
+            credentials:"include"
+          })
+          if(response.status!==200){
+navigate("/login")
+          }
+        }catch(e){
+          console.log(e)
+        }
+       }
+      isauth()
+    },[])
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`https://employee-desk-backend.onrender.com/admin/employeeData?email=${email}`);
+      const res = await fetch(`https://employeedeskbackend-env.up.railway.app/admin/employeeData?email=${email}`);
       const json = await res.json();
       if (json.length > 0) {
         setEmpName(json[0].employeeName);

@@ -5,9 +5,24 @@ function Admindata() {
   const [employees, setEmployees] = useState([]);
   const navigate = useNavigate();
 
+    useEffect(()=>{
+       const isauth=async()=>{
+        try{
+          const response=await fetch("https://employeedeskbackend-env.up.railway.app/verify_token",{
+            credentials:"include"
+          })
+          if(response.status!==200){
+navigate("/login")
+          }
+        }catch(e){
+          console.log(e)
+        }
+       }
+      isauth()
+    },[])
   useEffect(() => {
     const fetchEmployees = async () => {
-      const res = await fetch("https://employee-desk-backend.onrender.com/admin/employees");
+      const res = await fetch("https://employeedeskbackend-env.up.railway.app/admin/employees");
       const data = await res.json();
       setEmployees(data);
     };
