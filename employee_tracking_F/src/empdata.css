@@ -75,7 +75,7 @@ th {
   overflow-y: auto;
 }
 button {
-  background-color: #198754; /* Bootstrap success green */
+  background-color: #198754; 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -87,7 +87,7 @@ button {
 }
 
 button:hover {
-  background-color: #157347; /* Darker green */
+  background-color: #157347; 
   transform: scale(1.03);
 }
 

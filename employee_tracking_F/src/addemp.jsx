@@ -10,7 +10,7 @@ function Createemp() {
    useEffect(()=>{
          const isauth=async()=>{
           try{
-            const response=await fetch("https://employee-desk-backend.onrender.com/verify_token",{
+            const response=await fetch("http://localhost:5000/verify_token",{
               credentials:"include"
             })
             if(response.status!==200){
@@ -39,7 +39,7 @@ function Createemp() {
     } else {
       try {
         setloading(true);
-        const res = await fetch("https://employee-desk-backend.onrender.com/NewUser", {
+        const res = await fetch("http://localhost:5000/NewUser", {
           method: "POST",
           body: JSON.stringify({ mail, pass, name, role,pho }),
           headers: {

@@ -23,12 +23,12 @@ function Home() {
 
         <div className="feature-card">
           <h2>🗂 Task History</h2>
-          <p>Employees can view their submitted tasks anytime within the same week.</p>
+          <p>Employees can view their submitted tasks anytime within the same month.</p>
         </div>
 
         <div className="feature-card">
           <h2>🧹 Weekly Auto-Cleanup</h2>
-          <p>At the end of each week, all task records are cleaned to keep the system fresh.</p>
+          <p>At the end of each month, all task records are cleaned to keep the system fresh.</p>
         </div>
       </section>
 

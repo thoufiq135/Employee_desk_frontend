@@ -24,7 +24,7 @@ function Login(){
        setload(true)
        setwarn2(null)
        try{
-      const res=  await fetch("https://employee-desk-backend.onrender.com/Login",{
+      const res=  await fetch("http://localhost:5000/Login",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"

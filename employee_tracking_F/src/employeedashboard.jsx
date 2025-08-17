@@ -12,7 +12,7 @@ function Employee(){
        useEffect(()=>{
           const isauth=async()=>{
            try{
-             const response=await fetch("https://employee-desk-backend.onrender.com/verify_token",{
+             const response=await fetch("http://localhost:5000/verify_token",{
                credentials:"include"
              })
              if(response.status!==200){
